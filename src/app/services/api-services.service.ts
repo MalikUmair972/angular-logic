@@ -9,10 +9,9 @@ export class ApiServicesService {
 
   constructor(private http: HttpClient) { }
 
-  // API URL to fetch multiple Pokémon
-  url = 'https://pokeapi.co/api/v2/pokemon';  // Fetching first 10 Pokémon
+  url = 'https://pokeapi.co/api/v2/pokemon';  
   
   api(): Observable<any> {
-    return this.http.get(this.url);  // API call
+    return this.http.get(this.url);  
   }
 }
