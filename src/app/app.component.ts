@@ -11,11 +11,16 @@ import { ApiServicesService } from './services/api-services.service';
 export class AppComponent {
   title = 'angular-logic';
   latest: any;
+  isOpen: boolean = false;
+
   
   constructor (private apiservice: ApiServicesService) {
     this.apiservice.fetch().subscribe((data) => {
       this.latest = data;
       console.log(this.latest)
     })
+  }
+  toggleOpen(): void {
+    this.isOpen = !this.isOpen;
   }
 }

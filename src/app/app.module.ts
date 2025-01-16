@@ -5,10 +5,12 @@ import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CatApiComponent } from './cat-api/cat-api.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CatApiComponent,
   ],
   imports: [
     BrowserModule,
