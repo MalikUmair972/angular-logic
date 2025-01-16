@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ApiServicesService } from './services/api-services.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,4 +10,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-logic';
+  latest: any;
+  
+  constructor (private apiservice: ApiServicesService) {
+    this.apiservice.fetch().subscribe((data) => {
+      this.latest = data;
+      console.log(this.latest)
+    })
+  }
 }

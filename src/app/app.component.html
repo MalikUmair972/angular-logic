@@ -1,8 +1,5 @@
-<h1>{{title}}</h1>
-<button onclick="show()">Click Me</button>
-
-<div class="popup">
-  <div class="modal">
-    <h1>Thanks for Clicking</h1>
-  </div>
-</div>
+<h1>{{ latest.name }}</h1>
+<span>{{ latest.date_local }}</span><br>
+<a [href]="latest.links.webcast" target="_blank">Watch Launch</a><br>
+<a [href]="latest.links.youtube_id" target="_blank">Youtube</a><br>
+<a [href]="latest.links.wikipedia" target="_blank">Watch Launch</a>
