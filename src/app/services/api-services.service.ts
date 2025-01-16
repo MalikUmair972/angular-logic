@@ -1,17 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { url } from 'inspector';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiServicesService {
+  url = 'https://api.spacexdata.com/v5/launches/latest';
 
-  constructor(private http: HttpClient) { }
-
-  url = 'https://pokeapi.co/api/v2/pokemon';  
-  
-  api(): Observable<any> {
-    return this.http.get(this.url);  
+  constructor(private http: HttpClient) {
+    this.fetch();
+  }
+  fetch() {
+    return this.http.get(this.url)
   }
 }
+
